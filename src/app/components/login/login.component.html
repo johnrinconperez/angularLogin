@@ -1,0 +1,25 @@
+<hr />
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">User</label>
+          <input type="email" class="form-control" [(ngModel)]="usr" placeholder="User">
+          <span class="text-danger" *ngIf="!isValid(usr)">Dato invalido</span>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="psw" placeholder="Password">
+          <span class="text-danger" *ngIf="!isValid(psw)">Dato invalido</span>
+        </div>
+        <button class="btn btn-primary" (click)="validate()">Submit</button>
+      </div>
+      <div *ngIf="isUserError">
+        <span class="text-warning">El usuario no se puede autenticar</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>

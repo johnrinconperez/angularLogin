@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'login';
-  constructor ( ,private translate: TranslatePipe){
+  constructor ( , private translate: TranslatePipe){
     this.translate.use ('en');
     this.translate.use ('en').then (() =>
       console.log (translate.data));

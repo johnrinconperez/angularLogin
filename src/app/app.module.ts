@@ -10,7 +10,13 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AccountComponent } from './components/account/account.component';
 import { IdentityService } from './services/identity.service';
 import { AuthorizationGuard } from './guards/authorization.guard';
-import { TraslatePipe } from './pipe/translate.pipe';
+import { TranslatePipe } from './pipe/translate.pipe';
+
+export function setupTranslatefactory (
+  service: TranslateService): Function {
+    return () => service.use ('en');
+  }
+)
 
 @NgModule({
   declarations: [
@@ -34,11 +40,11 @@ import { TraslatePipe } from './pipe/translate.pipe';
   providers: [
     IdentityService,
     AuthorizationGuard,
-    TraslatePipe,
+    TranslatePipe,
     {
       provide: APP_INITIALIZER,
       useFactory: setupTranslatefactory,
-      deps: {TranslatePipe},
+      deps: [TranslatePipe],
       multi: true
     }
   ],

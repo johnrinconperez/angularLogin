@@ -1,0 +1,22 @@
+{
+    "NAV-BAR":{
+        "Lbl_Home"    : "Inicio",
+        "Lbl_Login"   : "Iniciar Sesión",
+        "Lbl_Account" : "Mi Cuenta",
+        "Lbl_Settings": "Configuración",
+        "Lbl_LogOut"  : "Cerrar Sesión"
+    },
+    "ACCOUNT":
+    {
+        "Lbl_Account" : "Cuenta",
+        "Lbl_SingIn"  : "Iniciar Sesión",
+        "Lbl_Name"    : "Nombre",
+        "Lbl_LogOut"  : "Cerrar Sesión",
+        "Lbl_Password": "Contraseña"
+    },
+    "HOME":
+    {
+        "Lbl_Welcome" : "Bienvenido",
+        "Lbl_Messange": "Hola esta es la aplicacion de Login en Angular"
+    }
+}

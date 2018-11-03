@@ -1,4 +1,11 @@
 {
+    "NAV-BAR":{
+        "Lbl_Home"    : "Home",
+        "Lbl_Login"   : "Log IN",
+        "Lbl_Account" : "My Account",
+        "Lbl_Settings": "Settings",
+        "Lbl_LogOut"  : "LogOut"
+    },
     "ACCOUNT":
     {
         "Lbl_Account" : "Account",
@@ -9,7 +16,7 @@
     },
     "HOME":
     {
-        "Lbl_Welcome" : "Welcome"
+        "Lbl_Welcome" : "Welcome",
+        "Lbl_Messange": "Hello this is the app Login in Angular"
     }
-    
 }

@@ -12,6 +12,7 @@ import { IdentityService } from './services/identity.service';
 import { AuthorizationGuard } from './guards/authorization.guard';
 import { TranslatePipe } from './pipe/translate.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslateTransformPipe } from './pipe/translatepipetransform.pipe';
 
 export function setupTranslatefactory (service: TranslatePipe): Function {
     return () => service.use ('en');
@@ -23,7 +24,8 @@ export function setupTranslatefactory (service: TranslatePipe): Function {
     HomeComponent,
     LoginComponent,
     NavBarComponent,
-    AccountComponent
+    AccountComponent,
+    TranslateTransformPipe
   ],
   imports: [
     BrowserModule,

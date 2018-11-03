@@ -11,7 +11,7 @@ export class AppComponent {
   constructor (
     private translate: TranslatePipe
     ) {
-      this.translate.use ('en').then ( ans => console.log (ans));
+      this.translate.use ('es'); // .then ( ans => console.log (ans));
   }
 
 }

@@ -11,6 +11,7 @@ import { AccountComponent } from './components/account/account.component';
 import { IdentityService } from './services/identity.service';
 import { AuthorizationGuard } from './guards/authorization.guard';
 import { TranslatePipe } from './pipe/translate.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 export function setupTranslatefactory (service: TranslatePipe): Function {
     return () => service.use ('en');
@@ -33,11 +34,13 @@ export function setupTranslatefactory (service: TranslatePipe): Function {
       {path: 'login', component: LoginComponent},
       {path: 'account', component: AccountComponent, canActivate: [AuthorizationGuard] },
       {path: '**', redirectTo: ''}
-    ])
+    ]),
+    HttpClientModule
   ],
   providers: [
     IdentityService,
     AuthorizationGuard,
+    HttpClientModule,
     TranslatePipe,
     {
       provide: APP_INITIALIZER,

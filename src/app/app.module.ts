@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -10,6 +10,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AccountComponent } from './components/account/account.component';
 import { IdentityService } from './services/identity.service';
 import { AuthorizationGuard } from './guards/authorization.guard';
+import { TraslatePipe } from './pipe/translate.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,14 @@ import { AuthorizationGuard } from './guards/authorization.guard';
   ],
   providers: [
     IdentityService,
-    AuthorizationGuard
+    AuthorizationGuard,
+    TraslatePipe,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: setupTranslatefactory,
+      deps: {TranslatePipe},
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -12,11 +12,9 @@ import { IdentityService } from './services/identity.service';
 import { AuthorizationGuard } from './guards/authorization.guard';
 import { TranslatePipe } from './pipe/translate.pipe';
 
-export function setupTranslatefactory (
-  service: TranslateService): Function {
+export function setupTranslatefactory (service: TranslatePipe): Function {
     return () => service.use ('en');
-  }
-)
+}
 
 @NgModule({
   declarations: [

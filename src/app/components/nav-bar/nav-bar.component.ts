@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IdentityService } from 'src/app/services/identity.service';
 import { IUser } from 'src/app/models/user.model';
+import { TranslatePipe } from 'src/app/pipe/translate.pipe';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,7 +13,8 @@ export class NavBarComponent implements OnInit {
   user: IUser;
 
   constructor(
-    private identityService: IdentityService
+    private identityService: IdentityService,
+    private translate: TranslatePipe
   ) { }
 
   ngOnInit() {
@@ -34,4 +36,11 @@ export class NavBarComponent implements OnInit {
   logOut(): void {
     this.identityService.logOut();
   }
+
+  changeLanguage(): void {
+    this.translate.use(
+      this.translate.langCurrent === 'es' ? 'en' : 'es'
+    );
+  }
+
 }

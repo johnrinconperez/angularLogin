@@ -1,10 +1,11 @@
 {
     "NAV-BAR":{
         "Lbl_Home"    : "Home",
-        "Lbl_Login"   : "Log IN",
+        "Lbl_Login"   : "Login",
         "Lbl_Account" : "My Account",
         "Lbl_Settings": "Settings",
-        "Lbl_LogOut"  : "LogOut"
+        "Lbl_LogOut"  : "LogOut",
+        "Lbl_Language": "./assets/img/spanishLanguage.png"
     },
     "ACCOUNT":
     {

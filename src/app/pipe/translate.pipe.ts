@@ -6,13 +6,15 @@ import { HttpClient } from '@angular/common/http';
 export class TranslatePipe {
 
     data: any;
+    langCurrent: string;
 
     constructor (private http: HttpClient) { }
 
     use (lang: string): Promise<{}> {
         return new Promise<{}>((resolve, reject) => {
             try {
-                const path = `assets/i18n/lang.${ lang || 'es' }.json`;
+                this.langCurrent = lang || 'es';
+                const path = `assets/i18n/lang.${ this.langCurrent }.json`;
                 this.http.get<{}>(path).subscribe(
                     translation => {
                         this.data = Object.assign({}, translation || {});

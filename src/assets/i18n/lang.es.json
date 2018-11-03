@@ -4,7 +4,8 @@
         "Lbl_Login"   : "Iniciar Sesión",
         "Lbl_Account" : "Mi Cuenta",
         "Lbl_Settings": "Configuración",
-        "Lbl_LogOut"  : "Cerrar Sesión"
+        "Lbl_LogOut"  : "Cerrar Sesión",
+        "Lbl_Language": "./assets/img/englishLanguage.png"
     },
     "ACCOUNT":
     {
